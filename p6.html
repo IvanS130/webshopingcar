@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de ABP del CECyTEM La Paz</title>
+   <link rel="stylesheet" href="estilop.css"/>
+   <link rel="stylesheet" href="registro.css"/>
+</head>
+<body>
+    <header>
+       <strong><h1 style="color:ghostwhite;">Iniciar sesion</h1></strong>
+    </header>
+    <nav>
+        <a href="abp.html">Inicio</a>
+        <a href="p2.html">productos mantenimiento</a>
+        <a href="p3.html">productos programacion</a>
+        <a href="p4.html">quienes somos</a>
+        <a href="p5.html">contactos</a>
+        <a href="p6.html">Iniciar sesion</a>
+        <a href="https://cecytem.mx/deo/gui/LogIn.jsp">pagina deo</a>
+    </nav>
+    <center>
+    <div class="container2">
+        <h2>Iniciar Sesión</h2>
+        <form name="mf">
+            <p>Usuario<input type="text" id="usuario" name="usuario" required><br></p>
+            <p>Contraseña<input type="password" id="contra" name="contraseña" required><br></p>
+            <p><input type="button" value="Iniciar Sesión" onclick="p()"></p>
+            <p>¿No tienes cuenta?<a href="#">Registrate</a></p>
+        </form>
+    </div>
+
+    <script>
+        function p() {
+            let usuario = document.mf.usuario.value;
+            let contra = document.mf.contraseña.value;
+
+            if (usuario === 'admin' && contra === '12345') {
+                window.location.href = 'abp.html';
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        }
+    </script>
+</body>
+</html>
